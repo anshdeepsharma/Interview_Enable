@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="payload\AuditHistory.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="payload\AuditHistory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.1" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
+    <PackageReference Include="NUnit.Analyzers" Version="3.6.1" />
+    <PackageReference Include="coverlet.collector" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MSX.Transition.API\MSX.Transition.API.csproj" />
+    <ProjectReference Include="..\MSX.Transition.Business.Services.Contracts\MSX.Transition.Business.Services.Contracts.csproj" />
+    <ProjectReference Include="..\MSX.Transition.Business.Services\MSX.Transition.Business.Services.csproj" />
+    <ProjectReference Include="..\MSX.Transition.Providers.Contracts\MSX.Transition.Providers.Contracts.csproj" />
+    <ProjectReference Include="..\MSX.Transition.Providers\MSX.Transition.Providers.csproj" />
+  </ItemGroup>
+
+</Project>

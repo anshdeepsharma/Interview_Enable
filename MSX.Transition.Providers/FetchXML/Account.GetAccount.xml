@@ -1,0 +1,14 @@
+﻿<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false" GSXPAGEDETAIL="">
+  <entity name="account">
+    <account_columnlist/>
+    <order attribute="accountid" descending="false" />
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+      <MORECONDITIONS/>
+    </filter>
+    <link-entity name="territory" from="territoryid" to="territoryid" visible="false" link-type="outer" alias="territory">
+		<attribute name="name"/>
+		<attribute name="msp_salesgeographyareacode"/>
+	</link-entity>
+  </entity>
+</fetch>

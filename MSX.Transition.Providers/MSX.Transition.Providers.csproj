@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FetchXML\Account.GetAccount.xml" />
+    <None Remove="FetchXML\Opportunity.UserIsInTeam.xml" />
+    <None Remove="FetchXML\Opportunity.UserIsOwner.xml" />
+    <None Remove="FetchXML\Transition.GetTransition.xml" />
+    <None Remove="Mapper\TransitionFieldMapper.json" />
+    <None Remove="Mapper\TransitionTeamFieldMapper.json" />
+    <None Remove="Mapper\UserFieldMapper.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="FetchXML\Transition.GetTransition.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FetchXML\Account.GetAccount.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FetchXML\Opportunity.UserIsOwner.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FetchXML\Opportunity.UserIsInTeam.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapper\TransitionTeamFieldMapper.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapper\TransitionFieldMapper.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapper\UserFieldMapper.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.MSX.Platform.Tools.DataVerseTranslator" Version="1.2.145" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MSX.Transition.Providers.Contracts\MSX.Transition.Providers.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

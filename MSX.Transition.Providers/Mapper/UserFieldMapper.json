@@ -1,0 +1,13 @@
+{
+  "EntityLogicalName": "systemuser",
+  "Fields": [
+    {
+      "Source": "Alias",
+      "Destination": "systemuserid",
+      "LookupEntity": "systemusers",
+      "IsResolved": false,
+      "ResolverQuery": "systemusers?$filter=domainname eq 'SEARCHCONDTION'",
+      "LookUpEntityPrimaryKey": "systemuserid"
+    }
+  ]
+}

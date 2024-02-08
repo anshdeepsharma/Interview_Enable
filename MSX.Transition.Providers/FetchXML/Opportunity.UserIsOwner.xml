@@ -1,0 +1,10 @@
+﻿<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true" savedqueryid="3defa8ef-4147-e311-9405-00155db3ba1e" no-lock="false">
+	<entity name="opportunity">
+		<opportunity_columnlist/>
+		<filter type="and">
+			<condition attribute="owninguser" operator="eq" value="{0}"/>
+			<condition attribute="statecode" operator="eq" value="0"/>
+			<MORECONDITIONS/>
+		</filter>
+	</entity>
+</fetch>

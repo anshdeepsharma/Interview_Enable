@@ -1,0 +1,103 @@
+{
+  "EntityLogicalName": "msp_relationshipmanagement",
+  "Fields": [
+    {
+      "Source": "Name",
+      "Destination": "msp_name"
+    },
+    {
+      "Source": "AccountId",
+      "Destination": "msp_accountid",
+      "LookupEntity": "accounts",
+      "IsResolved": true
+    },
+    {
+      "Source": "OwnerId",
+      "Destination": "ownerid",
+      "LookupEntity": "systemusers",
+      "IsResolved": true
+    },
+    {
+      "Source": "OwnerRoleType",
+      "Destination": "msp_ownerroletype",
+      "IsResolved": false
+    },
+    {
+      "Source": "ActivityTypeCode",
+      "Destination": "msp_activitytypecode",
+      "IsResolved": false
+    },
+    {
+      "Source": "AccountTPId",
+      "Destination": "msp_accounttpid"
+    },
+    {
+      "Source": "IncomingATS",
+      "Destination": "msp_incomingats",
+      "LookupEntity": "systemusers",
+      "IsResolved": true
+    },
+    {
+      "Source": "OutgoingATS",
+      "Destination": "msp_outgoingats",
+      "LookupEntity": "systemusers",
+      "IsResolved": true
+    },
+    {
+      "Source": "IncomingSSP",
+      "Destination": "msp_incomingssp",
+      "LookupEntity": "systemusers",
+      "IsResolved": true
+    },
+    {
+      "Source": "OutgoingSSP",
+      "Destination": "msp_outgoingssp",
+      "LookupEntity": "systemusers",
+      "IsResolved": true
+    },
+    {
+      "Source": "CurrentSegment",
+      "Destination": "msp_currentsegment",
+      "IsResolved": false
+    },
+    {
+      "Source": "CurrentSubsegment",
+      "Destination": "msp_currentsubsegment",
+      "IsResolved": false
+    },
+    {
+      "Source": "PreviousSegment",
+      "Destination": "msp_previoussegment",
+      "IsResolved": false
+    },
+    {
+      "Source": "PreviousSubsegment",
+      "Destination": "msp_previoussubsegment",
+      "IsResolved": false
+    },
+    {
+      "Source": "AccountTransitiionType",
+      "Destination": "msp_accounttransitiiontype",
+      "IsResolved": false
+    },
+    {
+      "Source": "DueDate",
+      "Destination": "msp_duedate"
+    },
+    {
+      "Source": "ActivityStatusCode",
+      "Destination": "msp_activitystatuscode",
+      "IsResolved": false
+    },
+    {
+      "Source": "SolutionArea",
+      "Destination": "msp_transitionsolutionarea"
+    },
+    {
+      "Source": "Manager",
+      "Destination": "msp_manager",
+      "LookupEntity": "systemusers",
+      "IsResolved": true
+    }
+  ]
+}

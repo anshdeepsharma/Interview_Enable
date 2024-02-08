@@ -1,0 +1,20 @@
+﻿<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false" GSXPAGEDETAIL="">
+	<entity name="msp_relationshipmanagement">
+		<transition_columnlist/>
+		<order attribute="createdon" descending="false" />
+		<filter type="and">
+			<condition attribute="msp_activitystatuscode" operator="ne" value="861980001" />
+			<condition attribute="statecode" operator="eq" value="0" />
+			<condition attribute="createdon" operator="last-x-hours" value="{0}" />
+			<MORECONDITIONS/>
+		</filter>
+		<link-entity name="msp_transitioningteam" from="msp_associatedtransition" to="msp_relationshipmanagementid" visible="false" link-type="outer" alias="team">
+			<attribute name="activityid" />
+			<attribute name="msp_role" />
+			<attribute name="ownerid" />
+			<attribute name="msp_memberid" />
+			<attribute name="msp_transitionmode" />
+			<attribute name="msp_solutionarea" />
+		</link-entity>
+	</entity>
+</fetch>

@@ -1,0 +1,37 @@
+{
+  "EntityLogicalName": "msp_transitioningteam",
+  "Fields": [
+    {
+      "Source": "Role",
+      "Destination": "msp_role",
+      "IsResolved": false
+    },
+    {
+      "Source": "OwnerId",
+      "Destination": "ownerid",
+      "LookupEntity": "systemusers",
+      "IsResolved": true
+    },
+    {
+      "Source": "TransitionId",
+      "Destination": "msp_associatedtransition",
+      "LookupEntity": "msp_relationshipmanagements",
+      "IsResolved": true
+    },
+    {
+      "Source": "MemberId",
+      "Destination": "msp_memberid",
+      "LookupEntity": "systemusers",
+      "IsResolved": true
+    },
+    {
+      "Source": "TransitionMode",
+      "Destination": "msp_transitionmode",
+      "IsResolved": false
+    },
+    {
+      "Source": "SolutionArea",
+      "Destination": "msp_solutionarea"
+    }
+  ]
+}

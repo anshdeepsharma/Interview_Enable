@@ -1,0 +1,19 @@
+﻿<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+	<entity name="opportunity">
+		<opportunity_columnlist/>
+
+		<filter type="and">
+			<condition attribute="statecode" operator="eq" value="0"/>
+			<condition attribute="owningteam" operator="not-null"/>
+			<MORECONDITIONS/>
+		</filter>
+		<link-entity name="team" from="teamid" to="owningteam" link-type="inner" alias="to">
+			<link-entity name="teammembership" from="teamid" to="teamid" link-type="inner" alias="tmo">
+				<filter type='and'>
+					<condition attribute="systemuserid" operator="eq" value="{0}"/>
+				</filter>
+				<attribute name="systemuserid"/>
+			</link-entity>
+		</link-entity>
+	</entity>
+</fetch>

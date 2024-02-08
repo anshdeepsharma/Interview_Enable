@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MSX.Transition.Business.Services.Contracts\MSX.Transition.Business.Services.Contracts.csproj" />
+    <ProjectReference Include="..\MSX.Transition.Providers.Contracts\MSX.Transition.Providers.Contracts.csproj" />
+    <ProjectReference Include="..\MSX.Transition.Providers\MSX.Transition.Providers.csproj" />
+  </ItemGroup>
+
+</Project>
